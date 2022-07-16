@@ -1,0 +1,185 @@
+# Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: 复旦生存手册 | Fudan Manual
+# site_url: https://fudanmanual.github.io/
+site_author: Editorial Board of Fudan Manual
+site_description: >-
+  One-stop infomation portal for Fudaners
+
+# Repository
+repo_name: FudanManual - GitHub Repo
+repo_url: https://github.com/FudanManual/FudanManual
+
+# Copyright
+copyright: Copyright &copy; 2022 - 2022 Fudan Manual
+
+# Configuration
+theme:
+  name: null
+  custom_dir: !ENV [THEME_DIR, "theme/material"]
+
+  # Static files
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      # toggle:
+      #   icon: material/toggle-switch
+      #   name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      # toggle:
+      #   icon: material/toggle-switch-off-outline
+      #   name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/regular/envelope
+      link: mailto:fudan-manual@outlook.com
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - 主页: index.md
+  - 引言:
+    - Intro/index.md
+  - 快捷入口: Resources/index.md
+  - GPA改革:
+    - GPA/index.md
+    - 学校的GPA制度和数据: GPA/other-institutions.md
+    - 进度更新: GPA/updates.md
+  - 选课:
+    - 选课: Curriculum/index.md
+    - 选课系统使用: Curriculum/system.md
+    - 通用课程推荐与避雷:
+      - 七模: Curriculum/7-modules.md
+      - 英语课: Curriculum/english.md
+      - 政治课: Curriculum/politics.md
+      - 其他: Curriculum/others.md
+    - 专业课程推荐与避雷:
+      - 计算机科学与技术: Curriculum/Major/CS.md
+  - 科研: empty.md
+  - 实习: empty.md
+  - 转专业: empty.md
+  - 入伍: empty.md
+  - 生活: empty.md
+  - 旁门左道: empty.md
+  - 出国申请:
+    - Abroad/why.md
+    - Abroad/resources.md
+    - Abroad/PhDorMaster.md
+    - Abroad/agency.md
+    - Abroad/timeline.md
+    - Abroad/prepare.md
+    - Abroad/projects.md
+    - Abroad/application.md
+    - Abroad/English.md
+    - 申请经验分享:
+      - Abroad/share/index.md
+  - 保研: empty.md
+  - 考研: empty.md
+  - 就业: empty.md
+  - 我要贡献:
+    - contribute.md
