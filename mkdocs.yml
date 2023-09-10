@@ -27,7 +27,7 @@ site_description: >-
 
 # Repository
 repo_name: FudanManual - GitHub Repo
-repo_url: https://github.com/FudanManual/FudanManual
+repo_url: https://github.com/FudanManual/
 
 # Copyright
 copyright: Copyright &copy; 2022 - 2022 Fudan Manual
@@ -89,6 +89,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - with-pdf
 
 # Customization
 extra:
